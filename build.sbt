@@ -3,8 +3,8 @@ import sbt.Keys.scalaVersion
 ThisBuild / organization     := "com.intenthq"
 ThisBuild / organizationName := "Intent HQ"
 
-lazy val scala212 = "2.12.12"
-lazy val scala213 = "2.13.3"
+lazy val scala212 = "2.12.20"
+lazy val scala213 = "2.13.15"
 lazy val supportedScalaVersions = List(scala213, scala212)
 
 lazy val root = (project in file("."))
@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
     crossScalaVersions := supportedScalaVersions
   )
 
-testFrameworks += new TestFramework("weaver.framework.TestFramework")
+testFrameworks += new TestFramework("weaver.framework.CatsEffect")
 
 publishTo := Some("GitHub Package Registry (intenthq/scala-secret)" at "https://maven.pkg.github.com/intenthq/scala-secret")
 credentials ++= scala.util.Properties
