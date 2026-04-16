@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "mergeConfidence:all-badges"],
+  "dependencyDashboard": true,
+  "enabledManagers": ["github-actions", "sbt"],
+  "schedule": ["every weekday"],
+  "timezone": "Europe/London",
+  "prHourlyLimit": 20,
+  "prConcurrentLimit": 5,
+  "commitMessagePrefix": "chore: FOU-860 🔄 ",
+  "labels": ["dependencies"]
+}
